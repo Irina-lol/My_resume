@@ -1,0 +1,122 @@
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #6C5CE7; /* Новый цвет */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile-info p {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #6C5CE7; /* Новый цвет */
+}
+
+/* Collapsible block */
+.collapsible {
+  background-color: #6C5CE7; /* Новый цвет */
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.collapsible:hover {
+  background-color: #5a4dbf; /* Темнее основной цвет */
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* Skillbar */
+.skillbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill {
+  background-color: #6C5CE7; /* Новый цвет */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  animation: fillSkill 2s forwards;
+}
+
+@keyframes fillSkill {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Контакты */
+.contact {
+  text-align: center;
+}
+
+/* Адаптивность */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact {
+    grid-column: span 2;
+  }
+}
